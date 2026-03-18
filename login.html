@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="styleLogin.css" />
+    <title>EELU Library Hub | Login</title>
+  </head>
+  <body>
+    <section class="Login">
+      <div class="container">
+        <div class="left">
+          <div class="logo">
+            <div class="icon">
+              <img src="imgs/book.svg" alt="icon" />
+            </div>
+            <div class="text">
+              <h1>EELU Library Hub</h1>
+              <p>Egyptian E-Learning University</p>
+            </div>
+          </div>
+
+          <h2>Welcome to Your Digital Library</h2>
+          <p>
+            Access thousands of academic resources for Business Administration
+            and Information Technology programs.
+          </p>
+
+          <div class="icons">
+            <div class="dot">
+              <i class="fa-solid fa-book"></i>
+            </div>
+            <div class="text">
+              <h3>Extensive Collection</h3>
+              <p>Digital and physical books for all years</p>
+            </div>
+          </div>
+
+          <div class="icons">
+            <div class="dot">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div class="text">
+              <h3>Extensive Collection</h3>
+              <p>Digital and physical books for all years</p>
+            </div>
+          </div>
+
+          <div class="icons">
+            <div class="dot">
+              <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="text">
+              <h3>Accessibility First</h3>
+              <p>Features for students with special needs</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="right">
+          <form class="login">
+            <h3>Login to Your Account</h3>
+            <p>Use your university email to access the library</p>
+
+            <label for="mail">University Email</label>
+            <div class="input-con">
+              <img src="imgs/mail.svg" alt="email icon" />
+              <input
+                type="email"
+                placeholder="student@eelu.edu.eg"
+                name="mail"
+                id="mail"
+              />
+            </div>
+            <label for="pass">Password</label>
+            <div class="input-con">
+              <img src="imgs/lock.svg" alt="Lock icon" />
+              <input
+                type="password"
+                placeholder="Enter Your Password"
+                name="pass"
+                id="pass"
+              />
+            </div>
+            <input type="submit" value="Login" class="btn" id="submitLogin"/>
+
+            <p class="toRegister" id="toRegister">
+              Don't have an account? Register Here
+            </p>
+          </form>
+
+          <form class="register">
+            <h3>Create New Account</h3>
+            <p>Register with your university email</p>
+
+            <label for="fullName">Full Name</label>
+            <div class="input-con">
+              <img src="imgs/user (1).svg" alt="User icon" />
+              <input
+                type="text"
+                placeholder="Enter Full Name"
+                name="text"
+                id="fullName"
+              />
+            </div>
+
+            <label for="mail">University Email</label>
+            <div class="input-con">
+              <img src="imgs/mail.svg" alt="email icon" />
+              <input
+                type="email"
+                placeholder="student@eelu.edu.eg"
+                name="mail"
+                id="mail"
+              />
+            </div>
+
+            <label for="pass">Password</label>
+            <div class="input-con">
+              <img src="imgs/lock.svg" alt="Lock icon" />
+              <input
+                type="password"
+                placeholder="Enter Your Password"
+                name="pass"
+                id="pass"
+              />
+            </div>
+            <label>Faculty</label>
+            <select>
+              <option>Information Technology (IT)</option>
+              <option>Business Administration (BA)</option>
+            </select>
+
+            <label>Academic Year</label>
+            <select>
+              <option>Year 1</option>
+              <option>Year 2</option>
+              <option>Year 3</option>
+              <option>Year 4</option>
+            </select>
+            <input type="submit" value="Login" class="btn" />
+
+            <p class="toLogin" id="toLogin">
+              Already have an account? Login Here
+            </p>
+          </form>
+          
+        </div>
+      </div>
+    </section>
+    <script src="login.js"></script>
+  </body>
+</html>
