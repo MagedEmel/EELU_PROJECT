@@ -6,6 +6,7 @@
   border: none;
   list-style: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  overflow-x: hidden;
 }
 .container {
   width: 90%;
@@ -60,11 +61,13 @@
 .header .container .userIcon h6 {
   color: grey;
 }
-.header .container .user .logout .btn {
+.header .container .user .logout .btn,
+.sideBar .logout .btn {
   background-color: transparent;
   color: white;
 }
-.header .container .user .logout {
+.header .container .user .logout,
+.sideBar .logout {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -76,44 +79,91 @@
   font-size: 14px;
   transition: 0.3s;
 }
-.header .container .user .logout img {
+.header .container .user .logout img,
+.sideBar .logout img {
   height: 20px;
   width: 20px;
   text-align: left;
 }
 
-.header .container .user .logout:hover {
+.header .container .user .logout:hover,
+.sideBar .logout:hover {
   cursor: pointer;
   background-color: white;
 }
-.header .container .user .logout:hover button {
+.header .container .user .logout:hover button,
+.sideBar .logout:hover button {
   color: black;
 }
 
-.header .container .user .logout img.black {
+.header .container .user .logout img.black,
+.sideBar .logout img.black {
   display: none;
 }
-.header .container .user .logout:hover img.white {
+.header .container .user .logout:hover img.white,
+.sideBar .logout img.white {
   display: none;
 }
 
-.header .container .user .logout:hover img.black {
+.header .container .user .logout:hover img.black,
+.sideBar .logout:hover img.black {
   display: block;
 }
 .header .container .tomenu {
   display: none;
 }
-.header .container .linkesRes{
+.header .container .linkesRes {
   display: none;
 }
-@media (max-width: 1270px) {
-  .header .container .tomenu {
-    display: block;
-  }
-  .header .container nav ul .linkes li {
-    display: none;
-  }
+.header .container .titleInHeader h5 {
+  color: #a3a3a3;
 }
+
+.sideBar {
+  width: 25%;
+  height: 100vh;
+  position: absolute;
+  right: 0;
+  background-color: #002549;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 20px;
+  opacity: 0;
+  border-radius: 10px;
+  border-left: 2px solid white;
+  transition: 0.3s;
+}
+.sideBar.active {
+  opacity: 1;
+}
+.sideBar h5,
+.sideBar h2 {
+  color: white;
+}
+.sideBar ul .linkes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.sideBar ul .linkes li {
+  display: flex;
+  gap: 15px;
+  color: #5b8fff;
+  font-size: 18px;
+}
+.sideBar ul .linkes li:hover {
+  cursor: pointer;
+}
+.sideBar .titleInHeader h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.sideBar .titleInHeader h5 {
+  font-size: 14px;
+}
+
 .WelcomeSec {
   background-color: #003366e1;
   position: relative;
@@ -193,6 +243,7 @@
 .WelcomeUser h4 {
   color: gray;
 }
+
 .AboutLib,
 .OurFaculties,
 .QuickAccess {
@@ -200,7 +251,8 @@
 }
 .AboutLib .container h2,
 .OurFaculties .container h2,
-.QuickAccess .container h2 {
+.QuickAccess .container h2,
+.LibraryServices .container h2 {
   color: #16395d;
   margin-bottom: 20px;
   font-size: 30px;
@@ -246,7 +298,7 @@
 .OurFaculties .container .Faculties .BA,
 .OurFaculties .container .Faculties .IT {
   width: 48%;
-  height: 340px;
+  height: 370px;
   border-radius: 9px;
   border: 2px solid #6c6c6c35;
   border-left: 4px solid #003366;
@@ -291,6 +343,7 @@
   border-radius: 8px;
   height: 200px;
   padding: 20px;
+  transition: 0.3s;
 }
 .QuickAccess .container .access > div div.dot {
   width: 40px;
@@ -302,10 +355,129 @@
   align-items: center;
   justify-content: center;
 }
+
 .QuickAccess .container .access > div h3 {
   margin-top: 15px;
   margin-bottom: 25px;
 }
 .QuickAccess .container .access > div p {
   color: #6c6c6c;
+}
+.QuickAccess .container .access > div:hover {
+  box-shadow: #6c6c6c 1px 1.5px 1.5px 1.5px;
+}
+.LibraryServices .container .services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.LibraryServices .container .services .service {
+  width: 30%;
+  height: 150px;
+  border: 1px solid #6c6c6c;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.LibraryServices .container .services .service p {
+  margin-top: 20px;
+  color: #6c6c6c;
+  font-size: 15px;
+}
+.LibraryServices .container .services .service h3 {
+  margin-top: 5px;
+  font-size: 20px;
+}
+.LibraryServices .container .services .service i {
+  color: #003366;
+  font-size: 24px;
+}
+
+@media (max-width: 1270px) {
+  .header .container .tomenu {
+    display: block;
+  }
+  .header .container nav ul .linkes li,
+  .header .container .user .logout {
+    display: none;
+  }
+  .header .container .titleInHeader h2 {
+    font-size: 100%;
+  }
+  .header .container .titleInHeader h5 {
+    font-size: 60%;
+  }
+  .header .container .user {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 1060px) {
+  .AboutLib .container .shapes {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .AboutLib .container .shapes .shape1,
+  .AboutLib .container .shapes .shape2 {
+    width: 80%;
+    box-shadow: #16395d 2px 3px 5px 1px;
+  }
+  .OurFaculties .container .Faculties {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .OurFaculties .container .Faculties .BA,
+  .OurFaculties .container .Faculties .IT {
+    width: 80%;
+    box-shadow: #16395d 2px 3px 5px 1px;
+  }
+  .QuickAccess .container .access {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .QuickAccess .container .access > div {
+    width: 45%;
+    box-shadow: #16395d 2px 3px 5px 1px;
+  }
+}
+
+@media (max-width: 970px) {
+  .WelcomeSec .text {
+    width: 60%;
+    top: 15%;
+  }
+  .WelcomeSec .text h2 {
+    font-size: 35px;
+  }
+  .WelcomeSec .text h5 {
+    font-size: 18px;
+  }
+  .WelcomeSec .text p {
+    font-size: 16px;
+  }
+  .WelcomeSec .text .btns {
+    justify-content: space-between;
+  }
+  .WelcomeSec .text .btn,
+  .WelcomeSec .text .btn.acc {
+    width: 48%;
+    height: 50px;
+  }
+}
+
+@media (max-width: 800px){
+  .LibraryServices .container .services{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .LibraryServices .container .services .service{
+    width: 80%;
+  }
 }

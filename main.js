@@ -1,8 +1,12 @@
 "use strict";
 
-let toLoginFromHome = document.querySelector(
-  ".header .container .user .logout #toLogin",
-);
-toLoginFromHome.onclick = () => {
-  window.location = "login.html";
+let toMenu = document.getElementById("toMenu");
+let sideBar = document.getElementById("sideBar");
+toMenu.onclick = () => {
+  sideBar.classList.toggle("active");
 };
+window.addEventListener("resize", function () {
+    if (window.innerWidth >= 1270 && sideBar.classList.contains("active")) {
+        sideBar.classList.remove("active");
+    }
+});

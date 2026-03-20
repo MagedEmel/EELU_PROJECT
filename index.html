@@ -8,10 +8,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
-    <title>EELU Library Hub | Login</title>
+    <title>EELU Library Hub | Home</title>
   </head>
   <body>
     <section class="header">
@@ -63,13 +62,60 @@
             <div class="logout">
               <img src="imgs/log-out.svg" alt="" srcset="" class="white" />
               <img src="imgs/log-out (1).svg" alt="" srcset="" class="black" />
-              <button class="btn" id="toLogin">Logout</button>
+              <a href="login.html">
+                <button class="btn" id="toLogin">Logout</button>
+              </a>
             </div>
-            <img src="imgs/menu.svg" id="toMenu" class="tomenu"/>
+            <img src="imgs/menu.svg" id="toMenu" class="tomenu" />
           </div>
         </nav>
       </div>
     </section>
+
+    <div class="sideBar" id="sideBar">
+      <div class="titleInHeader">
+        <img src="imgs/book (1).svg" alt="" srcset="" />
+        <div>
+          <h2>EELU Library Hub</h2>
+          <h5>Egyptian E-Learning University</h5>
+        </div>
+      </div>
+      <ul>
+        <div class="linkes">
+          <li>
+            <img src="imgs/book-open.svg" alt="" srcset="" />
+            <p>Home</p>
+          </li>
+          <li>
+            <img src="imgs/search.svg" alt="" srcset="" />
+            <p>Search</p>
+          </li>
+          <li>
+            <img src="imgs/book (1).svg" alt="" srcset="" />
+            <p>My Books</p>
+          </li>
+          <li>
+            <img src="imgs/credit-card.svg" alt="" srcset="" />
+            <p>Accessibility</p>
+          </li>
+          <li>
+            <img src="imgs/shield.svg" alt="" srcset="" />
+            <p>Admin</p>
+          </li>
+          <li>
+            <img src="imgs/phone.svg" alt="" srcset="" />
+            <p>Contact</p>
+          </li>
+        </div>
+      </ul>
+      <div class="logout">
+        <img src="imgs/log-out.svg" alt="" srcset="" class="white" />
+        <img src="imgs/log-out (1).svg" alt="" srcset="" class="black" />
+        <a href="login.html">
+          <button class="btn" id="toLogin">Logout</button>
+        </a>
+      </div>
+    </div>
 
     <section class="WelcomeSec">
       <img src="imgs/library3.avif" />
@@ -176,7 +222,7 @@
         <div class="access">
           <div class="search">
             <div class="dot">
-              <img src="imgs/search.svg" />
+              <img src="imgs/search.svg" alt="" />
             </div>
             <h3>Search Books</h3>
             <p>Find books by title, author, or subject with advanced</p>
@@ -201,6 +247,33 @@
             </div>
             <h3>Support</h3>
             <p>Get helo from our library staff and support team</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="LibraryServices">
+      <div class="container">
+        <h2>Library Services</h2>
+        <div class="services">
+          <div class="service">
+            <img src="imgs/download.svg" alt="" srcset="" />
+            <h3>Digital Downloads</h3>
+            <p>
+              Download books in PDF or ePub format for offline reading and study
+            </p>
+          </div>
+          <div class="service">
+            <img src="imgs/clock.svg" alt="" srcset="" />
+            <h3>Extended Borrowing</h3>
+            <p>Borrow books for up to 14 days with renewal options available</p>
+          </div>
+          <div class="service">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Academic Support</h3>
+            <p>
+              Access course-specific materials organized by faculty and year
+            </p>
           </div>
         </div>
       </div>
