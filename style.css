@@ -120,7 +120,7 @@
 }
 
 .sideBar {
-  width: 25%;
+  width: 50%;
   height: 100vh;
   position: absolute;
   right: 0;
@@ -268,7 +268,7 @@
   border: 1px solid #6c6c6c35;
   border-radius: 3px;
   padding: 15px;
-  height: 200px;
+  height: auto;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -298,7 +298,7 @@
 .OurFaculties .container .Faculties .BA,
 .OurFaculties .container .Faculties .IT {
   width: 48%;
-  height: 370px;
+  height: auto;
   border-radius: 9px;
   border: 2px solid #6c6c6c35;
   border-left: 4px solid #003366;
@@ -341,7 +341,7 @@
   width: 24%;
   border: 2px solid #6c6c6c35;
   border-radius: 8px;
-  height: 200px;
+  min-height: 300px;
   padding: 20px;
   transition: 0.3s;
 }
@@ -547,18 +547,19 @@ footer > h5 {
   .QuickAccess .container .access {
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
   }
   .QuickAccess .container .access > div {
-    width: 45%;
+    width: 80%;
     box-shadow: #16395d 2px 3px 5px 1px;
   }
 }
 
 @media (max-width: 970px) {
   .WelcomeSec .text {
-    width: 60%;
+    width: 80%;
     top: 15%;
-    left: 20%;
+    left: 10%;
   }
   .WelcomeSec .text h2 {
     font-size: 35px;
