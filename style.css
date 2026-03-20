@@ -371,7 +371,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 .LibraryServices .container .services .service {
   width: 30%;
@@ -397,7 +397,113 @@
   color: #003366;
   font-size: 24px;
 }
-
+.LibraryStatistics .container {
+  background-color: #003366;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 50px;
+  width: 95%;
+}
+.LibraryStatistics .container > h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 35px;
+  color: #fff;
+}
+.LibraryStatistics .container .static {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.LibraryStatistics .container .static div > p {
+  color: #65aef8;
+  text-align: center;
+  font-size: 25px;
+}
+.LibraryStatistics .container .static div > h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 35px;
+}
+footer {
+  background-color: #003366;
+  padding: 25px;
+}
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #5b8fff;
+}
+footer > div > div {
+  width: 30%;
+}
+footer .text h3 {
+  color: #fff;
+}
+footer .text p {
+  margin-top: 25px;
+  color: #5b8fff;
+}
+footer .quickLinks > h3 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+footer .quickLinks > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .quickLinks > ul li a {
+  text-decoration: none;
+  color: #5b8fff;
+  transition: 0.3s;
+}
+footer .quickLinks > ul li a:hover {
+  color: #dbdbdb;
+}
+footer .contact h3 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-bottom: 20px;
+}
+footer .contact > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+}
+footer .contact > div a {
+  text-decoration: none;
+}
+footer .contact > div a p {
+  color: #5b8fff;
+  transition: 0.3s;
+}
+footer .contact > div a p:hover {
+  color: #dddddd;
+}
+footer .contact > div p {
+  color: #5b8fff;
+}
+footer hr {
+  color: #fff;
+}
+footer > h5 {
+  text-align: center;
+  color: #65aef8;
+  margin-bottom: 30px;
+}
+/* Start Responsive */
 @media (max-width: 1270px) {
   .header .container .tomenu {
     display: block;
@@ -452,6 +558,7 @@
   .WelcomeSec .text {
     width: 60%;
     top: 15%;
+    left: 20%;
   }
   .WelcomeSec .text h2 {
     font-size: 35px;
@@ -471,13 +578,29 @@
     height: 50px;
   }
 }
-
-@media (max-width: 800px){
-  .LibraryServices .container .services{
+@media (max-width: 860px) {
+  .LibraryStatistics .container .static{
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .LibraryStatistics .container .static > div{
+    width: 45%;
+  }
+  footer >div {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  footer >div >div{
+    width: 55%;
+  }
+}
+@media (max-width: 800px) {
+  .LibraryServices .container .services {
     flex-direction: column;
     gap: 10px;
   }
-  .LibraryServices .container .services .service{
+  .LibraryServices .container .services .service {
     width: 80%;
   }
 }
+/* End Responsive */
