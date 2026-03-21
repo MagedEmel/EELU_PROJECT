@@ -24,7 +24,6 @@
 }
 .header .container .titleInHeader {
   display: flex;
-  justify-content: space-between;
   gap: 10px;
   align-items: center;
 }
@@ -120,8 +119,8 @@
 }
 
 .sideBar {
-  width: 50%;
-  height: 100vh;
+  width: 100%;
+  height: 60%;
   position: absolute;
   right: 0;
   background-color: #002549;
@@ -155,6 +154,10 @@
 }
 .sideBar ul .linkes li:hover {
   cursor: pointer;
+}
+.sideBar .titleInHeader {
+  display: flex;
+  gap: 10px;
 }
 .sideBar .titleInHeader h2 {
   font-size: 20px;
@@ -341,8 +344,11 @@
   width: 24%;
   border: 2px solid #6c6c6c35;
   border-radius: 8px;
-  min-height: 300px;
+  /* min-height: 300px; */
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   transition: 0.3s;
 }
 .QuickAccess .container .access > div div.dot {
@@ -514,6 +520,9 @@ footer > h5 {
   .header .container .user .logout {
     display: none;
   }
+  .header .container .titleInHeader {
+    width: 100%;
+  }
   .header .container .titleInHeader h2 {
     font-size: 100%;
   }
@@ -521,9 +530,9 @@ footer > h5 {
     font-size: 60%;
   }
   .header .container .user {
-    width: 50%;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
   }
 }
 
@@ -582,19 +591,19 @@ footer > h5 {
   }
 }
 @media (max-width: 860px) {
-  .LibraryStatistics .container .static{
+  .LibraryStatistics .container .static {
     flex-wrap: wrap;
     gap: 50px;
   }
-  .LibraryStatistics .container .static > div{
+  .LibraryStatistics .container .static > div {
     width: 45%;
   }
-  footer >div {
+  footer > div {
     flex-wrap: wrap;
     gap: 20px;
   }
-  footer >div >div{
-    width: 55%;
+  footer > div > div {
+    width: 100%;
   }
 }
 @media (max-width: 800px) {
