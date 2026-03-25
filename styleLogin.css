@@ -158,3 +158,16 @@ section.Login .container .right option{
     background-color: #eceaea;
     padding: 3px;
 }
+
+@media (max-width: 950px) {
+  section.Login .container{
+    flex-direction: column;
+  }
+  section.Login .container .left{
+    width: 100%;
+  }
+  section.Login .container .right,
+    section.Login .container .right form{
+    width: 100%;
+  }
+}

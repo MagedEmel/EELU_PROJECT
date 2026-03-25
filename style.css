@@ -14,13 +14,23 @@
 }
 .header {
   background-color: #003366;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding: 10px;
+}
+.header .container{
+  width: 95%;
 }
 .header .container nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
+  position:sticky;
+  top: 0;
 }
 .header .container .titleInHeader {
   display: flex;
@@ -127,15 +137,23 @@
   z-index: 100;
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   padding: 10px;
   gap: 20px;
   opacity: 0;
   border-radius: 10px;
   border-left: 2px solid white;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 50px;
   transition: 0.3s;
 }
 .sideBar.active {
   opacity: 1;
+}
+.sideBar.active.scrolled{
+  opacity: 0.9;
 }
 .sideBar h5,
 .sideBar h2 {
@@ -512,7 +530,7 @@ footer > h5 {
   margin-bottom: 30px;
 }
 /* Start Responsive */
-@media (max-width: 1270px) {
+@media (max-width: 1250px) {
   .header .container .tomenu {
     display: block;
   }
@@ -569,7 +587,7 @@ footer > h5 {
 @media (max-width: 970px) {
   .WelcomeSec .text {
     width: 80%;
-    top: 15%;
+    top: 28%;
     left: 10%;
   }
   .WelcomeSec .text h2 {
