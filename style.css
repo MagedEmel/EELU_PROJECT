@@ -11,9 +11,10 @@
   width: 90%;
   margin: auto;
 }
+/* Start Header and Footer */
 .header {
   background-color: #003366;
-  position: fixed;
+  position: sticky;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -137,6 +138,88 @@ header .container .linkes .logout {
 .header .container .titleInHeader h5 {
   color: #a3a3a3;
 }
+
+footer {
+  background-color: #003366;
+  padding: 25px;
+}
+footer > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 40px;
+  border-bottom: 2px solid #5b8fff;
+}
+footer > div > div {
+  width: 30%;
+}
+footer .text h3 {
+  color: #fff;
+}
+footer .text p {
+  margin-top: 25px;
+  color: #5b8fff;
+}
+footer .quickLinks > h3 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+footer .quickLinks > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .quickLinks > ul li a {
+  text-decoration: none;
+  color: #5b8fff;
+  transition: 0.3s;
+}
+footer .quickLinks > ul li a:hover {
+  color: #dbdbdb;
+}
+footer .contact h3 {
+  color: #fff;
+  margin-bottom: 25px;
+}
+footer .contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  margin-bottom: 20px;
+}
+footer .contact > div {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  text-align: left;
+}
+footer .contact > div a {
+  text-decoration: none;
+}
+footer .contact > div a p {
+  color: #5b8fff;
+  transition: 0.3s;
+}
+footer .contact > div a p:hover {
+  color: #dddddd;
+}
+footer .contact > div p {
+  color: #5b8fff;
+}
+footer hr {
+  color: #fff;
+}
+footer > h5 {
+  text-align: center;
+  color: #65aef8;
+  margin-bottom: 30px;
+}
+/* End header and Footer */
+
+/* Start Index */
 .WelcomeSec {
   background-color: #003366e1;
   position: relative;
@@ -403,84 +486,268 @@ header .container .linkes .logout {
   color: #fff;
   font-size: 35px;
 }
-footer {
-  background-color: #003366;
-  padding: 25px;
+/* End Index */
+
+/* Start Contact Page */
+.support {
+  margin: 40px 0;
 }
-footer > div {
+.support .container > h2 {
+  color: #16395d;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.support .container > h4 {
+  color: #6c6c6c;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.support .left > div {
+  display: flex;
+  gap: 5px;
+}
+.support .typesOfSupports {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
-  padding-bottom: 40px;
-  border-bottom: 2px solid #5b8fff;
 }
-footer > div > div {
-  width: 30%;
-}
-footer .text h3 {
-  color: #fff;
-}
-footer .text p {
-  margin-top: 25px;
-  color: #5b8fff;
-}
-footer .quickLinks > h3 {
-  color: #fff;
-  margin-bottom: 25px;
-}
-footer .quickLinks > ul {
+.support .typesOfSupports > div {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-footer .quickLinks > ul li a {
-  text-decoration: none;
-  color: #5b8fff;
-  transition: 0.3s;
-}
-footer .quickLinks > ul li a:hover {
-  color: #dbdbdb;
-}
-footer .contact h3 {
-  color: #fff;
-  margin-bottom: 25px;
-}
-footer .contact {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  align-items: left;
+  gap: 15px;
+  border: 2px solid #6c6c6c73;
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+  min-height: 240px;
+}
+.support .typesOfSupports > div h3 {
+  color: #000;
+}
+.support .typesOfSupports > div .dot {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #002549;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.support .typesOfSupports > div p {
+  color: #6c6c6c;
+}
+.support .typesOfSupports > div a {
+  text-decoration: none;
+}
+.support .typesOfSupports > div a h4,
+.support .typesOfSupports > div h4 {
+  color: #16395d;
+  font-size: 20px;
+}
+.support .typesOfSupports > div span {
+  font-size: 12px;
+}
+.details {
   margin-bottom: 20px;
 }
-footer .contact > div {
+.details .container {
   display: flex;
-  gap: 10px;
-  margin-bottom: 15px;
+  justify-content: space-between;
+}
+.details .left {
+  border: 2px solid #6c6c6c35;
+  padding: 10px;
+  border-radius: 10px;
+  width: 55%;
+  height: fit-content;
+}
+.details .left > div {
+  display: flex;
+  gap: 5px;
+}
+.details .left .nameAndAddress {
+  display: flex;
+  justify-content: space-between;
+}
+.details .left .nameAndAddress > div {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.details .left > p {
+  color: #6c6c6c;
+  margin-bottom: 20px;
+}
+.details .left form label p {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.details .left form input {
+  height: 50px;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
   width: 100%;
-  text-align: left;
-}
-footer .contact > div a {
-  text-decoration: none;
-}
-footer .contact > div a p {
-  color: #5b8fff;
   transition: 0.3s;
 }
-footer .contact > div a p:hover {
-  color: #dddddd;
+.details .left form input:focus {
+  border: 3px solid black;
 }
-footer .contact > div p {
-  color: #5b8fff;
+.details .left form select {
+  margin: 10px 0;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
-footer hr {
+.details .left form input#message {
+  height: 80px;
+}
+.details .left form button {
+  width: 100%;
+  text-align: center;
+  margin: 15px 0;
+  height: 50px;
+  color: #fff;
+  background-color: #003366;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.details .left form button:hover {
+  cursor: pointer;
+  background-color: #002549;
+}
+.details .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 40%;
+}
+.details .right > div {
+  border: 2px solid #6c6c6c35;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.details .right .officehours > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  border-bottom: 1px solid #6c6c6c;
+  margin-bottom: 15px;
+}
+.details .right .officehours > div.last {
+  border-bottom: none;
+}
+.details .right .officehours > div h4 {
+  font-size: 18px;
+}
+.details .right .officehours > div p{
+  color: #6c6c6cd4;
+  font-size: 18px;
+  font-weight: bold;
+}
+.details .right .officehours con.icon {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.details .right .needHelp{
+  background-color: #003366;
+  padding: 15px;
+}
+.details .right .needHelp h3{
+  margin-bottom: 20px;
   color: #fff;
 }
-footer > h5 {
-  text-align: center;
-  color: #65aef8;
+.details .right .needHelp > p{
+  color: #bad7f4;
+}
+.details .right .needHelp button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin: 15px 0;
+  width: 100%;
+  gap: 10px;
+  color: #003366;
+  border-radius: 10px;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+}
+.details .right .needHelp button:hover{
+  background-color: #c2d9ef;
+  cursor: pointer;
+}
+.details .right .ImportantLinks{
+  padding: 20px;
+}
+.details .right .ImportantLinks h3{
   margin-bottom: 30px;
 }
+.details .right .ImportantLinks p{
+  margin: 10px 0;
+  color: #16395d;
+  transition: 0.3s;
+}
+.details .right .ImportantLinks p:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+@media (max-width: 950px) {
+  .details .container{
+    flex-direction: column;
+    gap: 15px;
+  }
+  .details .left{
+    width: 100%;
+  }
+  .details .right{
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .details .right > div{
+    width: 45%;
+  }
+}
+@media (max-width:700px) {
+  .details .right > div{
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .support .container .typesOfSupports {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .support .typesOfSupports > div {
+    width: 100%;
+  }
+}
+/* End .contact Page */
 /* Start Responsive */
 @media (max-width: 1250px) {
   .header .container .tomenu {

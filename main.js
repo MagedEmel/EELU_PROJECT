@@ -4,12 +4,6 @@ const toMenu = document.getElementById("toMenu");
 const linkes = document.getElementById("linkes");
 const isAdmin = document.getElementById("isAdmin");
 const userName = document.getElementById("userName");
-
-if (!localStorage.getItem("Admin")) {
-  isAdmin.style.display = "none";
-  userName.innerHTML = localStorage.getItem("userName");
-}
-
 toMenu.addEventListener("click", () => {
   linkes.classList.toggle("active");
 });
@@ -34,3 +28,8 @@ document.addEventListener("click", (e) => {
     linkes.classList.remove("active");
   }
 });
+
+if (!localStorage.getItem("Admin")) {
+  isAdmin.style.display = "none";
+  userName.innerHTML = localStorage.getItem("userName");
+}
