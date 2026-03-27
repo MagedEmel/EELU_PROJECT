@@ -6,7 +6,6 @@
   border: none;
   list-style: none;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  overflow-x: hidden;
 }
 .container {
   width: 90%;
@@ -21,7 +20,7 @@
   width: 100%;
   padding: 10px;
 }
-.header .container{
+.header .container {
   width: 95%;
 }
 .header .container nav {
@@ -29,8 +28,16 @@
   justify-content: space-between;
   align-items: center;
   color: white;
-  position:sticky;
+  position: sticky;
   top: 0;
+}
+.header .container nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+.header .container nav ul li a:hover {
+  color: #65aef8;
 }
 .header .container .titleInHeader {
   display: flex;
@@ -71,12 +78,12 @@
   color: grey;
 }
 .header .container .user .logout .btn,
-.sideBar .logout .btn {
+header .container .linkes .logout .btn {
   background-color: transparent;
   color: white;
 }
 .header .container .user .logout,
-.sideBar .logout {
+header .container .linkes .logout {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -89,34 +96,37 @@
   transition: 0.3s;
 }
 .header .container .user .logout img,
-.sideBar .logout img {
+header .container .linkes .logout img {
   height: 20px;
   width: 20px;
   text-align: left;
 }
 
 .header .container .user .logout:hover,
-.sideBar .logout:hover {
+header .container .linkes .logout:hover {
   cursor: pointer;
   background-color: white;
 }
 .header .container .user .logout:hover button,
-.sideBar .logout:hover button {
+header .container .linkes .logout:hover button {
   color: black;
 }
 
 .header .container .user .logout img.black,
-.sideBar .logout img.black {
+header .container .linkes .logout img.black {
   display: none;
 }
 .header .container .user .logout:hover img.white,
-.sideBar .logout img.white {
+header .container .linkes .logout:hover img.white {
   display: none;
 }
 
 .header .container .user .logout:hover img.black,
-.sideBar .logout:hover img.black {
+header .container .linkes .logout:hover img.black {
   display: block;
+}
+header .container .linkes .logout {
+  display: none;
 }
 .header .container .tomenu {
   display: none;
@@ -127,64 +137,6 @@
 .header .container .titleInHeader h5 {
   color: #a3a3a3;
 }
-
-.sideBar {
-  width: 100%;
-  height: 60%;
-  position: absolute;
-  right: 0;
-  background-color: #002549;
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 10px;
-  gap: 20px;
-  opacity: 0;
-  border-radius: 10px;
-  border-left: 2px solid white;
-  position: fixed;
-  width: 100%;
-  left: 0;
-  top: 50px;
-  transition: 0.3s;
-}
-.sideBar.active {
-  opacity: 1;
-}
-.sideBar.active.scrolled{
-  opacity: 0.9;
-}
-.sideBar h5,
-.sideBar h2 {
-  color: white;
-}
-.sideBar ul .linkes {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-.sideBar ul .linkes li {
-  display: flex;
-  gap: 15px;
-  color: #5b8fff;
-  font-size: 18px;
-}
-.sideBar ul .linkes li:hover {
-  cursor: pointer;
-}
-.sideBar .titleInHeader {
-  display: flex;
-  gap: 10px;
-}
-.sideBar .titleInHeader h2 {
-  font-size: 20px;
-  margin-bottom: 10px;
-}
-.sideBar .titleInHeader h5 {
-  font-size: 14px;
-}
-
 .WelcomeSec {
   background-color: #003366e1;
   position: relative;
@@ -534,7 +486,30 @@ footer > h5 {
   .header .container .tomenu {
     display: block;
   }
-  .header .container nav ul .linkes li,
+
+  .header .container nav ul .linkes {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    background: #002549;
+    padding: 20px;
+    border-radius: 8px;
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  .header .container nav ul .linkes.active {
+    display: flex;
+  }
+  .header .container nav ul .linkes.active.scrolled {
+    opacity: 0.9;
+  }
+  header .container .linkes .logout {
+    display: flex;
+  }
   .header .container .user .logout {
     display: none;
   }

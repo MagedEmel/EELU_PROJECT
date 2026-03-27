@@ -1,32 +1,36 @@
 "use strict";
 
 const toMenu = document.getElementById("toMenu");
-const sideBar = document.getElementById("sideBar");
+const linkes = document.getElementById("linkes");
+const isAdmin = document.getElementById("isAdmin");
+const userName = document.getElementById("userName");
 
+if (!localStorage.getItem("Admin")) {
+  isAdmin.style.display = "none";
+  userName.innerHTML = localStorage.getItem("userName");
+}
+
+toMenu.addEventListener("click", () => {
+  linkes.classList.toggle("active");
+});
 // scroll effect
 window.addEventListener("scroll", () => {
-  sideBar.classList.toggle("scrolled", window.scrollY > 200);
+  linkes.classList.toggle("scrolled", window.scrollY > 200);
 });
-
-// open / close menu
-toMenu.onclick = () => {
-  sideBar.classList.toggle("active");
-};
 
 // responsive fix
 window.addEventListener("resize", () => {
   if (window.innerWidth >= 1270) {
-    sideBar.classList.remove("active");
+    linkes.classList.remove("active");
   }
 });
 
-// click outside
 document.addEventListener("click", (e) => {
   if (
-    sideBar.classList.contains("active") &&
-    !sideBar.contains(e.target) &&
+    linkes.classList.contains("active") &&
+    !linkes.contains(e.target) &&
     !toMenu.contains(e.target)
   ) {
-    sideBar.classList.remove("active");
+    linkes.classList.remove("active");
   }
 });

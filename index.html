@@ -8,12 +8,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
       integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer" />
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>EELU Library Hub | Home</title>
   </head>
   <body>
-    <section class="header">
+    <header class="header">
       <div class="container">
         <nav>
           <div class="titleInHeader">
@@ -24,31 +25,43 @@
             </div>
           </div>
           <ul>
-            <div class="linkes">
+            <div class="linkes active" id="linkes">
               <li>
                 <img src="imgs/book-open.svg" alt="" srcset="" />
-                <p>Home</p>
+                <a href="#"><p>Home</p></a>
               </li>
               <li>
                 <img src="imgs/search.svg" alt="" srcset="" />
-                <p>Search</p>
+                <a href="search.html"><p>Search</p></a>
               </li>
               <li>
                 <img src="imgs/book (1).svg" alt="" srcset="" />
-                <p>My Books</p>
+                <a href="mybooks.html"><p>My Books</p></a>
               </li>
               <li>
                 <img src="imgs/credit-card.svg" alt="" srcset="" />
-                <p>Accessibility</p>
+                <a href="Accessibility.html"><p>Accessibility</p></a>
               </li>
-              <li>
+              <li id="isAdmin">
                 <img src="imgs/shield.svg" alt="" srcset="" />
-                <p>Admin</p>
+                <a href="admin.html"><p>Admin</p></a>
               </li>
               <li>
                 <img src="imgs/phone.svg" alt="" srcset="" />
-                <p>Contact</p>
+                <a href="contact.html"><p>Contact</p></a>
               </li>
+              <div class="logout">
+                <img src="imgs/log-out.svg" alt="" srcset="" class="white" />
+                <img
+                  src="imgs/log-out (1).svg"
+                  alt=""
+                  srcset=""
+                  class="black"
+                />
+                <a href="login.html">
+                  <button class="btn" id="toLogin">Logout</button>
+                </a>
+              </div>
             </div>
           </ul>
           <div class="user">
@@ -70,52 +83,7 @@
           </div>
         </nav>
       </div>
-    </section>
-
-    <div class="sideBar" id="sideBar">
-      <div class="titleInHeader">
-        <img src="imgs/book (1).svg" alt="" srcset="" />
-        <div>
-          <h2>EELU Library Hub</h2>
-          <h5>Egyptian E-Learning University</h5>
-        </div>
-      </div>
-      <ul>
-        <div class="linkes">
-          <li>
-            <img src="imgs/book-open.svg" alt="" srcset="" />
-            <p>Home</p>
-          </li>
-          <li>
-            <img src="imgs/search.svg" alt="" srcset="" />
-            <p>Search</p>
-          </li>
-          <li>
-            <img src="imgs/book (1).svg" alt="" srcset="" />
-            <p>My Books</p>
-          </li>
-          <li>
-            <img src="imgs/credit-card.svg" alt="" srcset="" />
-            <p>Accessibility</p>
-          </li>
-          <li>
-            <img src="imgs/shield.svg" alt="" srcset="" />
-            <p>Admin</p>
-          </li>
-          <li>
-            <img src="imgs/phone.svg" alt="" srcset="" />
-            <p>Contact</p>
-          </li>
-        </div>
-      </ul>
-      <div class="logout">
-        <img src="imgs/log-out.svg" alt="" srcset="" class="white" />
-        <img src="imgs/log-out (1).svg" alt="" srcset="" class="black" />
-        <a href="login.html">
-          <button class="btn" id="toLogin">Logout</button>
-        </a>
-      </div>
-    </div>
+    </header>
 
     <section class="WelcomeSec">
       <img src="imgs/library3.avif" />
@@ -142,7 +110,7 @@
     </section>
 
     <section class="WelcomeUser">
-      <h3>Welcome back, Admin User!</h3>
+      <h3>Welcome back, <span id="userName">Admin</span> User!</h3>
       <h4>
         You are registered as a admin in the Information Technology faculty,
         Year 2.

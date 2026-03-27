@@ -29,6 +29,10 @@ submitLogin.onclick = (e) => {
     window.location = "index.html";
   } else {
     localStorage.removeItem("Admin");
+    let mail = mailInLogin.value;
+    mail = mail.split("@");
+    localStorage.setItem("userName", mail[0])
     window.location = "index.html";
   }
 };
+
